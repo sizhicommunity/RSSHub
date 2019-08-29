@@ -1,0 +1,13 @@
+#TODO 动态存储卷没有测试。
+#TODO 静态存储卷没有成功过。
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+  name: alicloud-disk-zhangjiakou-b
+provisioner: alicloud/disk
+parameters:
+  type: available
+  regionid: cn-zhangjiakou
+  zoneid: cn-zhangjiakou-b
+reclaimPolicy: Retain
